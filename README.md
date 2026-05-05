@@ -1,2 +1,45 @@
-# takunomi-kentei-5
-Codex practice project. Static quiz app for a fictional home drinking certification. No private data.
+# 宅飲み検定5級（静的Webアプリ）
+
+これは**架空の練習用Webアプリ**です。実在の資格・団体とは関係ありません。
+
+## 注意事項
+
+- 個人情報、秘密情報、パスワード、APIキーなどは入力しないでください。
+- このアプリは学習・デモ用途のため、正式な資格認定には利用できません。
+
+## 特徴
+
+- HTML / CSS / JavaScript のみで実装
+- サーバー・データベース・ログイン機能・外部API不使用
+- ブラウザ内だけで完結して動作
+- 受験者名入力 → 4択10問クイズ → 結果表示
+- 8問以上正解で合格し、認定証を表示
+- 不合格時は再受験が可能
+- 認定証を印刷可能（印刷時は認定証のみ表示）
+
+## 使い方
+
+1. `index.html` をブラウザで開く
+2. 受験者名を入力して「受験開始」を押す
+3. 10問の4択クイズに回答する
+4. 結果を確認する
+   - 合格（8問以上）: 認定証を表示、印刷可能
+   - 不合格: 「再受験する」で再挑戦
+
+## GitHub Pages での公開手順
+
+1. このリポジトリをGitHubへpushする
+2. GitHubのリポジトリ画面で **Settings** を開く
+3. 左メニューの **Pages** を開く
+4. **Build and deployment** で以下を設定
+   - Source: `Deploy from a branch`
+   - Branch: `main`（または公開したいブランチ）
+   - Folder: `/ (root)`
+5. 保存後、数分待って公開URLにアクセスする
+
+## ファイル構成
+
+- `index.html`
+- `style.css`
+- `script.js`
+- `README.md`
