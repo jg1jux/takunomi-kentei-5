@@ -1,0 +1,235 @@
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #1f2a37;
+  --muted: #5b6778;
+  --primary: #284a91;
+  --primary-hover: #1f3b74;
+  --secondary: #e7ecf8;
+  --ok: #1f7a47;
+  --ng: #9f2334;
+  --border: #dbe3ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #eef2f9, #f9fbff);
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.app-header h1 {
+  margin-bottom: 8px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(18, 39, 81, 0.08);
+}
+
+.hidden {
+  display: none;
+}
+
+label,
+.lead,
+.help,
+.error,
+.quiz-meta,
+.result-score,
+.result-status {
+  display: block;
+}
+
+input[type="text"] {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #bec9db;
+  font-size: 1rem;
+}
+
+.help,
+.quiz-meta,
+#result-name {
+  color: var(--muted);
+}
+
+.error {
+  min-height: 1.5em;
+  color: var(--ng);
+}
+
+.btn {
+  margin-top: 12px;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  min-height: 46px;
+}
+
+.primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.primary:hover {
+  background: var(--primary-hover);
+}
+
+.secondary {
+  background: var(--secondary);
+  color: #253a61;
+}
+
+.choices {
+  margin-top: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.choice-btn {
+  text-align: left;
+  border: 1px solid #c9d5e8;
+  background: #fff;
+}
+
+.choice-btn:hover {
+  background: #f2f6ff;
+}
+
+.result-score {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.pass {
+  color: var(--ok);
+}
+
+.fail {
+  color: var(--ng);
+}
+
+.certificate {
+  margin-top: 20px;
+  background: #fffdfa;
+  border: 8px double #7b5e16;
+  border-radius: 8px;
+  padding: 32px;
+  width: 100%;
+  aspect-ratio: 1.414 / 1;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.certificate-kicker {
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+.certificate h2 {
+  text-align: center;
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  margin: 8px 0;
+}
+
+.certificate-body {
+  text-align: center;
+}
+
+.certificate-name {
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: bold;
+  border-bottom: 2px solid #c7b37a;
+  margin: 8px auto;
+  padding-bottom: 4px;
+  min-width: 60%;
+}
+
+.certificate-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.issuer {
+  text-align: right;
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 18px;
+  }
+
+  .certificate {
+    min-height: 360px;
+    padding: 18px;
+  }
+
+  .certificate-footer {
+    flex-direction: column;
+  }
+
+  .issuer {
+    text-align: left;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .app-header,
+  #start-screen,
+  #quiz-screen,
+  #result-screen,
+  .actions {
+    display: none !important;
+  }
+
+  #certificate-screen {
+    display: block !important;
+  }
+
+  .certificate {
+    margin: 0;
+    width: 100%;
+    min-height: auto;
+    border-width: 6px;
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+}
