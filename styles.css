@@ -1,0 +1,75 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #f4f6fb;
+  color: #1f2937;
+}
+
+.container {
+  width: min(760px, 92vw);
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.1);
+}
+
+.lead, .meta {
+  color: #4b5563;
+}
+
+.choices {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.choice {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: left;
+  background: #fff;
+  cursor: pointer;
+}
+
+.choice:hover {
+  background: #f8fafc;
+}
+
+.choice.correct {
+  border-color: #16a34a;
+  background: #dcfce7;
+}
+
+.choice.wrong {
+  border-color: #dc2626;
+  background: #fee2e2;
+}
+
+.result {
+  min-height: 1.5em;
+  font-weight: 600;
+}
+
+.actions {
+  margin-top: 16px;
+}
+
+#nextBtn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+}

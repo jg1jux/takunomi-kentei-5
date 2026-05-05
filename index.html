@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>宅飲み検定クイズ</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>宅飲み検定クイズ</h1>
+    <p class="lead">100問の問題プールから毎回ランダムで1問出題されます。</p>
+
+    <section class="card">
+      <p id="meta" class="meta"></p>
+      <h2 id="question">読み込み中...</h2>
+      <div id="choices" class="choices"></div>
+      <p id="result" class="result"></p>
+      <div class="actions">
+        <button id="nextBtn" type="button">次の問題へ</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
